@@ -1,0 +1,12 @@
+a, input{
+    display: block;
+}
+
+img{
+    width: 30rem;
+}
+
+table, tr, td, th{
+    border: 2px solid pink;
+    border-collapse: collapse;
+}

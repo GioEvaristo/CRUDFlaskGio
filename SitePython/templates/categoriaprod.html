@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+    <a href="/categoriaprod/add">+ Adicionar</a>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Código</th>
+        </tr>
+        {% for categoriaprod in dados %}
+        <tr>
+            <td>{{categoriaprod.nome}}</td>
+            <td>{{categoriaprod.descricao}}</td>
+            <td>{{categoriaprod.codigo}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

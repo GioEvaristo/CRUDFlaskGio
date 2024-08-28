@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+    Nome: {{categoria.nome}}
+    Descrição: {{categoria.descricao}}
+    Código: {{categoria.codigo}}
+
+    {% if dados.codigo >= '0' %}
+        <h5>Código inválido! </h5>
+    {% endif %}
+
+    <table>
+        <tr>
+            <th>Categoria de Produtos</th>
+        </tr>
+    {% for descricao in dados.getlist('categoriaprod') %}
+        <tr>
+            <td>
+                <tr>Nome</tr>
+                    <td> {{nome}}</td>
+                <tr>Descrição</tr>
+                    <td>{{descricao}}</td>
+                <tr>Código</tr>
+                    <td> {{codigo}}</td>
+            </td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}
